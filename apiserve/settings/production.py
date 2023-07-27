@@ -1,8 +1,7 @@
 from .base import *
-import dj_database_url
+import os
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -10,10 +9,13 @@ ALLOWED_HOSTS = []
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default':  dj_database_url.config(
-        default='',
-        conn_max_age=600
-    )
+    'default':  {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv('NAME'),
+        'USER': os.getenv('USER'),
+        'PASSWORD': os.getenv('PASSWORD'),
+        'HOST': os.getenv('HOST'),
+    }
 }
 
 # Static files (CSS, JavaScript, Images)
