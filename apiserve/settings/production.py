@@ -11,10 +11,10 @@ ALLOWED_HOSTS = []
 DATABASES = {
     'default':  {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('NAME'),
-        'USER': os.getenv('USER'),
-        'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': os.getenv('HOST'),
+        'NAME': 'trasrouter',
+        'USER': 'postgres',
+        'PASSWORD': 'luis1234',
+        'HOST': '127.0.0.1',
     }
 }
 
