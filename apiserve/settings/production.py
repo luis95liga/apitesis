@@ -12,9 +12,9 @@ DATABASES = {
     'default':  {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'trasrouter',
-        'USER': 'postgres',
+        'USER': 'python',
         'PASSWORD': 'luis1234',
-        'HOST': '44.216.248.16',
+        'HOST': 'localhost',
     }
 }
 
